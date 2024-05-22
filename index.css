@@ -176,6 +176,7 @@ input[type="checkbox"]:active + .custom-checkbox {
 
 
 textarea {
+    font-size: var(--secondary-font-size);
     resize: none;
     height: clamp(8.25rem, 21.44083969465649rem + -27.480916030534353vw, 15rem);
 }
