@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Contact form</title>
+
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js" defer></script>
+</head>
+<body>
+
+  <main class="container">
+
+    <h1>
+      Contact Us
+    </h1>
+    
+    <form novalidate id="form">
+
+      <div class="texts">
+        <div class="names">
+          <div class="form-child name">
+            <label for="first-name">
+              First Name
+              <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+            <div id="first-name-error" class="error">This field is required</div>
+          </div>
+          
+          <div class="form-child name">
+            <label for="last-name">
+              Last Name
+              <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+            <div id="last-name-error" class="error">This field is required</div>
+          </div>
+        </div>
+        
+        <div class="form-child">
+          <label for="email">
+            Email Address
+            <span class="required" aria-hidden="true">*</span>
+          </label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+          <div id="email-error" class="error">Please enter a valid email address</div>
+        </div>
+        
+        <fieldset class="form-child">
+          <legend>
+            Query Type
+            <span class="required" aria-hidden="true">*</span>
+          </legend>
+          <div class="radios">
+            <div class="radio">
+              <input class="visually-hidden" type="radio" id="query-type-general" name="query-type" value="general-enquiry"
+                required>
+              <span class="custom-radio"></span>
+              <label for="query-type-general">General Enquiry</label>
+            </div>
+            <div class="radio">
+              <input class="visually-hidden" type="radio" id="query-type-support" name="query-type" value="support-request"
+                required>
+              <span class="custom-radio"></span>
+              <label for="query-type-support">Support Request</label>
+            </div>
+          </div>
+          <div id="query-type-error" class="error">Please select a query type</div>
+        </fieldset>
+        
+        <div class="form-child">
+          <label for="message">
+            Message
+            <span class="required" aria-hidden="true">*</span>
+          </label>
+          <textarea id="message" name="message" required></textarea>
+          <div id="message-error" class="error">This field is required</div>
+        </div>
+      </div>
+          
+      <div class="form-child">
+        <div class="check-flex">
+          <div>
+            <input id="consent" class="visually-hidden" type="checkbox" name="consent" required>
+            <span class="custom-checkbox"></span>
+          </div>
+          <label for="consent">
+            I consent to being contacted by the team
+            <span class="required" aria-hidden="true">*</span>
+          </label>
+        </div>
+        <div id="consent-error" class="error">To submit this form, please consent to being contacted</div>
+      </div>
+    
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+  </main>
+
+  <aside class="success">
+    <h2>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21">
+          <path fill="#fff"
+            d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z" />
+        </svg>
+      </span>  
+      Message Sent!
+    </h2>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </aside>
+  
+</body>
+</html>
