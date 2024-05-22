@@ -194,6 +194,6 @@ form.addEventListener('submit', (e) => {
         successDisplay.style.display = 'block'
         setTimeout(() => {
             successDisplay.style.display = 'none'
-        }, 3000)
+        }, 5000)
     }
 })
